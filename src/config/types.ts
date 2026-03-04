@@ -1,0 +1,286 @@
+/**
+ * TYPES FOR BUSINESS TEMPLATE
+ * -------------------------------------------------
+ * Denne filen inneholder kun TypeScript-typer.
+ * Den inneholder ingen data.
+ *
+ * Dette er "kontrakten" mellom:
+ * - config-filer (hero.config.ts, services.config.ts osv.)
+ * - siteConfig.ts (hub)
+ * - komponentene
+ */
+
+// -------------------------------------------------
+// SPRÅK
+// -------------------------------------------------
+
+export type LocalizedText = {
+  no: string;
+  en: string;
+};
+
+export type LocalizedList = {
+  no: string[];
+  en: string[];
+};
+
+// -------------------------------------------------
+// GENERELLE MØNSTRE
+// -------------------------------------------------
+
+export type CTA = {
+  label: LocalizedText;
+  href: string;
+};
+
+export type NavItem = {
+  label: LocalizedText;
+  href: string;
+};
+
+// -------------------------------------------------
+// HERO
+// -------------------------------------------------
+
+export type HeroImage = {
+  src: string;
+  alt: string;
+};
+
+export type HeroSection = {
+  headline: LocalizedText;
+  subtext: LocalizedText;
+  primaryCta: CTA;
+  secondaryCta: CTA;
+  image?: HeroImage;
+};
+
+// -------------------------------------------------
+// SERVICES
+// -------------------------------------------------
+
+export type Service = {
+  title: LocalizedText;
+  description: LocalizedText;
+  price?: LocalizedText;
+  bullets?: LocalizedList;
+  cta: CTA;
+  icon?: {
+    src: string;
+    alt: LocalizedText;
+  };
+};
+
+export type ServicesSection = {
+  title: LocalizedText;
+  lead: LocalizedText;
+  priceLabel: LocalizedText;
+  featuredIndex?: number | null;
+  items: Service[];
+};
+
+// -------------------------------------------------
+// PRICES
+// -------------------------------------------------
+
+export type PriceItem = {
+  title: LocalizedText;
+  price: LocalizedText;
+  description?: LocalizedText;
+};
+
+export type PricesSection = {
+  heading: LocalizedText;
+  subtext: LocalizedText;
+
+  modalTitle: LocalizedText;
+  closeLabel: LocalizedText;
+
+  fullListButtonLabel: LocalizedText;
+  previewCount: number;
+
+  items: PriceItem[];
+};
+
+// -------------------------------------------------
+// PROCESS (trekkspill)
+// -------------------------------------------------
+
+export type ProcessStep = {
+  title: string;
+  details: string;
+};
+
+export type LocalizedProcess = {
+  no: ProcessStep[];
+  en: ProcessStep[];
+};
+
+export type ProcessSection = {
+  title: LocalizedText;
+  lead: LocalizedText;
+  items: LocalizedProcess;
+};
+
+// -------------------------------------------------
+// WHY US
+// -------------------------------------------------
+
+export type WhyUsSection = {
+  title: LocalizedText;
+  lead: LocalizedText;
+  points: LocalizedList;
+  image?: {
+    src: string;
+    alt: LocalizedText;
+  };
+};
+
+// -------------------------------------------------
+// TEAM
+// -------------------------------------------------
+
+export type TeamMember = {
+  name: string;
+  title: LocalizedText;
+  image: string;
+  languages?: string[];
+};
+
+export type TeamSection = {
+  heading: LocalizedText;
+  subtext?: LocalizedText;
+  members: TeamMember[];
+};
+
+// -------------------------------------------------
+// FAQ / REVIEWS
+// -------------------------------------------------
+
+export type FAQItem = {
+  question: LocalizedText;
+  answer: LocalizedText;
+};
+
+export type FAQSection = {
+  title: LocalizedText;
+  lead: LocalizedText;
+  items: FAQItem[];
+};
+
+export type ReviewItem = {
+  name: LocalizedText;
+  text: LocalizedText;
+  stars?: number; // valgfritt
+};
+
+export type ReviewsSection = {
+  title: LocalizedText;
+  lead: LocalizedText;
+  items: ReviewItem[];
+};
+
+// -------------------------------------------------
+// CONTACT
+// -------------------------------------------------
+
+export type ContactSection = {
+  title: LocalizedText;
+  lead: LocalizedText;
+
+  show: {
+    phone?: boolean;
+    email?: boolean;
+    address?: boolean;
+    map?: boolean;
+  };
+};
+
+// -------------------------------------------------
+// FOOTER
+// -------------------------------------------------
+
+export type FooterConfig = {
+  orgNumber: string;
+  privacyLabel: LocalizedText;
+  orgLabel: LocalizedText;
+
+  // NYTT: flyttet footer-copy fra Footer.tsx til footer.config.ts
+  tagline: LocalizedText;
+  infoTitle: LocalizedText;
+  navTitle: LocalizedText;
+  backToTopLabel: LocalizedText;
+
+  privacy: {
+    title: LocalizedText;
+    paragraphs: LocalizedList;
+  };
+
+  credit?: {
+    label: string;
+    href: string;
+  };
+};
+
+// -------------------------------------------------
+// FEATURE FLAGS
+// -------------------------------------------------
+
+export type FeatureFlags = {
+  languageSwitch: boolean;
+
+  hero: boolean;
+  services: boolean;
+  process: boolean;
+  prices: boolean;
+  team: boolean;
+
+  fullPriceListCta: boolean;
+
+  whyUs: boolean;
+  reviews: boolean;
+  faq: boolean;
+  contact: boolean;
+  footer: boolean;
+};
+
+// -------------------------------------------------
+// HOVEDKONFIG
+// -------------------------------------------------
+
+export type SiteConfig = {
+  brand: {
+    name: string;
+    phone: string;
+    email: string;
+    location: string;
+
+    address?: LocalizedText;
+
+    logo: {
+      src: string;
+      alt: LocalizedText;
+    };
+
+    maps?: {
+      embedUrl?: string;
+      link?: string;
+    };
+  };
+
+  features: FeatureFlags;
+  nav: NavItem[];
+
+  // Seksjoner (konsistent mønster)
+  hero: HeroSection;
+  servicesSection: ServicesSection;
+  pricesSection: PricesSection;
+  processSection: ProcessSection;
+  teamSection?: TeamSection;
+  whyUsSection: WhyUsSection;
+  reviewsSection: ReviewsSection;
+  faqSection: FAQSection;
+  contactSection: ContactSection;
+
+  footer: FooterConfig;
+};

@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+/* =========================================================
+   1) Design tokens / vars
+   ========================================================= */
+:root {
+  /* Brand palette (camping default for dette repoet) */
+  --brand: #2f5e49;   /* hovedfarge */
+  --surface: #f5f3ee; /* varm lys bakgrunn */
+  --white: #ffffff;
+
+  /* Base */
+  --background: var(--surface);
+  --foreground: #171717;
+
+  /* Section backgrounds (annenhver) */
+  --section-odd: var(--surface);
+  --section-even: var(--white);
+
+  /* Footer */
+  --footer-bg: #f3f5f6;
+
+  /* Typography */
+  --text-lg: 1.125rem;
+
+  /* =======================================================
+     Header tokens (bruker brand)
+     ======================================================= */
+  --header-bg: var(--brand);
+  --header-text: #ffffff;
+  --header-border: rgba(255, 255, 255, 0.2);
+
+  --header-button-border: rgba(255, 255, 255, 0.4);
+
+  --header-mobile-bg: var(--brand);
+  --header-mobile-panel: #ffffff;
+}
+
+/* =========================================================
+   2) Base + typography
+   ========================================================= */
+html {
+  color-scheme: light;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Lesevennlig avsnitt */
+p {
+  line-height: 1.7;
+}
+
+/* Ikke la lange ord ødelegge layout */
+* {
+  overflow-wrap: anywhere;
+}
+
+/* Override Tailwind text-lg */
+.text-lg {
+  font-size: var(--text-lg);
+  font-weight: 500;
+}
+
+/* =========================================================
+   3) Reusable card utilities
+   ========================================================= */
+.card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 1.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.card-pad {
+  padding: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .card-pad {
+    padding: 1.75rem;
+  }
+}
+
+/* =========================================================
+   4) Motion safety
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  .hero-image-enter,
+  .reveal,
+  .reveal--heading,
+  .reveal-image-left {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* =========================================================
+   5) Hero animation
+   ========================================================= */
+@keyframes heroSlideInSoft {
+  from {
+    opacity: 0;
+    transform: translate3d(60px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-image-enter {
+    animation: heroSlideInSoft 1200ms cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 120ms;
+    will-change: transform, opacity;
+  }
+}
+
+/* =========================================================
+   6) Scroll reveal animations
+   ========================================================= */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 16px, 0);
+  transition:
+    opacity 850ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 850ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.reveal--heading {
+  transform: translate3d(0, 20px, 0);
+  transition-duration: 1000ms;
+}
+
+/* Reveal image from left */
+@media (min-width: 1024px) {
+  .reveal.reveal-image-left {
+    opacity: 0;
+    transform: translate3d(-320px, 0, 0);
+    filter: blur(6px);
+    transition:
+      opacity 1200ms cubic-bezier(0.16, 1, 0.3, 1),
+      transform 1200ms cubic-bezier(0.16, 1, 0.3, 1),
+      filter 1200ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal.reveal-image-left.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+  }
+}
+
+@media (max-width: 1023px) {
+  .reveal.reveal-image-left {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+}
