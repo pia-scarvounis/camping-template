@@ -13,6 +13,7 @@ import type { SiteConfig } from "@/config/types";
 
 // Seksjons-configs (flyttet ut)
 import { hero } from "@/config/hero.config";
+import { bookingSection } from "@/config/booking.config";
 import { servicesSection } from "@/config/services.config";
 import { pricesSection } from "@/config/prices.config";
 import { processSection } from "@/config/process.config";
@@ -52,6 +53,7 @@ export const siteConfig: SiteConfig = {
     languageSwitch: true,
 
     hero: true,
+    booking: true,
     services: true,
     process: true,
     prices: true,
@@ -78,6 +80,7 @@ export const siteConfig: SiteConfig = {
 
   // Seksjoner (importert)
   hero,
+  bookingSection,
   servicesSection,
   pricesSection,
   processSection,

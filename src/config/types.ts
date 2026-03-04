@@ -56,6 +56,31 @@ export type HeroSection = {
 };
 
 // -------------------------------------------------
+// BOOKING
+// -------------------------------------------------
+
+
+export type BookingFieldType = "date" | "select";
+
+export type BookingFieldOption = {
+  value: string;
+  label: LocalizedText;
+};
+
+export type BookingField = {
+  key: "checkIn" | "checkOut" | "guests";
+  type: BookingFieldType;
+  label: LocalizedText;
+  options?: BookingFieldOption[];
+};
+
+export type BookingSection = {
+  enabled: boolean;
+  buttonLabel: LocalizedText;
+  fields: BookingField[];
+};
+
+// -------------------------------------------------
 // SERVICES
 // -------------------------------------------------
 
@@ -230,6 +255,7 @@ export type FeatureFlags = {
   languageSwitch: boolean;
 
   hero: boolean;
+  booking: boolean;
   services: boolean;
   process: boolean;
   prices: boolean;
@@ -273,6 +299,7 @@ export type SiteConfig = {
 
   // Seksjoner (konsistent mønster)
   hero: HeroSection;
+  bookingSection: BookingSection;
   servicesSection: ServicesSection;
   pricesSection: PricesSection;
   processSection: ProcessSection;

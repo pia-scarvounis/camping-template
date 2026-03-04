@@ -1,80 +1,59 @@
 // src/config/services.config.ts
 import type { ServicesSection } from "./types";
 
-/**
- * SERVICES (én seksjon = ett config-objekt)
- * ------------------------------------------------
- * Mønsteret vi bruker i malen:
- * - ÉN export per seksjon (f.eks. servicesSection)
- * - Seksjons-tekst (title/lead/labels) + innhold (items) ligger samlet
- * - Komponentene renderer kun data herfra (ingen hardkoding)
- */
-
 export const servicesSection: ServicesSection = {
-  title: {
-    no: "Våre tjenester",
-    en: "Our services",
-  },
-  lead: {
-    no: "Skreddersydde løsninger tilpasset dine behov og mål.",
-    en: "Tailored solutions designed to fit your needs and goals.",
-  },
-  priceLabel: {
-    no: "Pris:",
-    en: "Price:",
-  },
+  // Beholdes for typen sin skyld – men brukes ikke i UI nå
+  title: { no: "", en: "" },
+  lead: { no: "", en: "" },
+  priceLabel: { no: "", en: "" },
 
-  // 0-basert index: 0=1. boks, 1=2. boks, 2=3. boks
-  featuredIndex: 2,
+  // 0=1.boks, 1=2.boks, 2=3.boks, 3=4.boks
+  featuredIndex: 1,
 
   items: [
     {
-      title: { no: "Grunnpakke", en: "Starter Package" },
-      description: {
-        no: "En solid start for små og mellomstore virksomheter som ønsker en profesjonell løsning.",
-        en: "A solid starting point for small and medium businesses looking for a professional solution.",
+      title: { no: "Wi-Fi", en: "Wi-Fi" },
+      description: { no: "", en: "" },
+      icon: {
+        src: "/icons/wifi-ikon.png",
+        alt: { no: "Wi-Fi ikon", en: "Wi-Fi icon" },
       },
-      price: { no: "Fra 4 900 kr", en: "From 4,900 NOK" },
-      bullets: {
-        no: ["Tilpasset oppsett", "Standard funksjonalitet", "Support inkludert"],
-        en: ["Custom setup", "Core functionality", "Support included"],
-      },
-      cta: {
-        label: { no: "Les mer", en: "Learn more" },
-        href: "#kontakt",
-      },
+      price: { no: "", en: "" },
+      bullets: { no: [], en: [] },
+      cta: { label: { no: "", en: "" }, href: "#tjenester" },
     },
     {
-      title: { no: "Utvidet løsning", en: "Advanced Solution" },
-      description: {
-        no: "For virksomheter som ønsker flere funksjoner og skreddersøm.",
-        en: "For businesses that require additional features and customization.",
+      title: { no: "Gratis Parkering", en: "Free Parking" },
+      description: { no: "", en: "" },
+      icon: {
+        src: "/icons/bil-ikon.png",
+        alt: { no: "Bil ikon", en: "Car icon" },
       },
-      price: { no: "Fra 9 900 kr", en: "From 9,900 NOK" },
-      bullets: {
-        no: ["Utvidet funksjonalitet", "Skreddersydd design", "Prioritert support"],
-        en: ["Extended functionality", "Custom design", "Priority support"],
-      },
-      cta: {
-        label: { no: "Se detaljer", en: "View details" },
-        href: "#kontakt",
-      },
+      price: { no: "", en: "" },
+      bullets: { no: [], en: [] },
+      cta: { label: { no: "", en: "" }, href: "#tjenester" },
     },
     {
-      title: { no: "Premium", en: "Premium Package" },
-      description: {
-        no: "En komplett løsning med full tilpasning og oppfølging.",
-        en: "A complete solution with full customization and follow-up.",
+      title: { no: "Gratis Parkering", en: "Free Parking" },
+      description: { no: "", en: "" },
+      icon: {
+        src: "/icons/bil-ikon.png",
+        alt: { no: "Bil ikon", en: "Car icon" },
       },
-      price: { no: "Etter avtale", en: "On request" },
-      bullets: {
-        no: ["Full tilpasning", "Dedikert rådgivning", "Langsiktig samarbeid"],
-        en: ["Full customization", "Dedicated consulting", "Long-term partnership"],
+      price: { no: "", en: "" },
+      bullets: { no: [], en: [] },
+      cta: { label: { no: "", en: "" }, href: "#tjenester" },
+    },
+    {
+      title: { no: "Gratis Parkering", en: "Free Parking" },
+      description: { no: "", en: "" },
+      icon: {
+        src: "/icons/bil-ikon.png",
+        alt: { no: "Bil ikon", en: "Car icon" },
       },
-      cta: {
-        label: { no: "Ta kontakt", en: "Contact us" },
-        href: "#kontakt",
-      },
+      price: { no: "", en: "" },
+      bullets: { no: [], en: [] },
+      cta: { label: { no: "", en: "" }, href: "#tjenester" },
     },
   ],
 };

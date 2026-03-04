@@ -1,5 +1,6 @@
 import Header from "@/components/ui/Header";
 import Hero from "@/components/sections/Hero";
+import BookingBar from "@/components/sections/BookingBar";
 import Services from "@/components/sections/Services";
 import Process from "@/components/sections/Process";
 import Prices from "@/components/sections/Prices";
@@ -16,6 +17,7 @@ export default function Home() {
       <div id="top" /> 
     <Header />
 <Hero />
+<BookingBar />
 <Services />
 <Prices />
 <Team />
