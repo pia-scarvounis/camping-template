@@ -59,7 +59,6 @@ export type HeroSection = {
 // BOOKING
 // -------------------------------------------------
 
-
 export type BookingFieldType = "date" | "select";
 
 export type BookingFieldOption = {
@@ -102,6 +101,32 @@ export type ServicesSection = {
   priceLabel: LocalizedText;
   featuredIndex?: number | null;
   items: Service[];
+};
+
+// -------------------------------------------------
+// ACCOMMODATION
+// -------------------------------------------------
+
+export type AccommodationItem = {
+  title: LocalizedText;
+  description: LocalizedText;
+  image: string;
+};
+
+export type AccommodationSection = {
+  heading: LocalizedText;
+  subtext: LocalizedText;
+  items: AccommodationItem[];
+};
+
+// -------------------------------------------------
+// GALLERY
+// -------------------------------------------------
+
+export type GallerySection = {
+  heading: LocalizedText;
+  subtext: LocalizedText;
+  images: string[];
 };
 
 // -------------------------------------------------
@@ -155,7 +180,7 @@ export type WhyUsSection = {
   title: LocalizedText;
   lead: LocalizedText;
   points: LocalizedList;
-  image?: {
+  image: {
     src: string;
     alt: LocalizedText;
   };
@@ -196,7 +221,7 @@ export type FAQSection = {
 export type ReviewItem = {
   name: LocalizedText;
   text: LocalizedText;
-  stars?: number; // valgfritt
+  stars?: number;
 };
 
 export type ReviewsSection = {
@@ -230,7 +255,6 @@ export type FooterConfig = {
   privacyLabel: LocalizedText;
   orgLabel: LocalizedText;
 
-  // NYTT: flyttet footer-copy fra Footer.tsx til footer.config.ts
   tagline: LocalizedText;
   infoTitle: LocalizedText;
   navTitle: LocalizedText;
@@ -257,6 +281,7 @@ export type FeatureFlags = {
   hero: boolean;
   booking: boolean;
   services: boolean;
+  gallery: boolean;
   process: boolean;
   prices: boolean;
   team: boolean;
@@ -297,10 +322,11 @@ export type SiteConfig = {
   features: FeatureFlags;
   nav: NavItem[];
 
-  // Seksjoner (konsistent mønster)
   hero: HeroSection;
   bookingSection: BookingSection;
   servicesSection: ServicesSection;
+  accommodationSection: AccommodationSection;
+  gallerySection: GallerySection;
   pricesSection: PricesSection;
   processSection: ProcessSection;
   teamSection?: TeamSection;
@@ -308,6 +334,5 @@ export type SiteConfig = {
   reviewsSection: ReviewsSection;
   faqSection: FAQSection;
   contactSection: ContactSection;
-
   footer: FooterConfig;
 };

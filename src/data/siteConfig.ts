@@ -1,4 +1,3 @@
-// src/data/siteConfig.ts
 /**
  * siteConfig.ts (MAL-HUB)
  * --------------------------------------------------------------------
@@ -11,10 +10,12 @@
 
 import type { SiteConfig } from "@/config/types";
 
-// Seksjons-configs (flyttet ut)
+// Seksjons-configs
 import { hero } from "@/config/hero.config";
 import { bookingSection } from "@/config/booking.config";
 import { servicesSection } from "@/config/services.config";
+import { accommodationSection } from "@/config/accommodationTypes.config";
+import { gallerySection } from "@/config/gallery.config";
 import { pricesSection } from "@/config/prices.config";
 import { processSection } from "@/config/process.config";
 import { teamSection } from "@/config/team.config";
@@ -23,10 +24,6 @@ import { reviewsSection } from "@/config/reviews.config";
 import { faqSection } from "@/config/faq.config";
 import { contactSection } from "@/config/contact.config";
 import { footer } from "@/config/footer.config";
-
-// --------------------------------------------------------------------
-// siteConfig (samler alt)
-// --------------------------------------------------------------------
 
 export const siteConfig: SiteConfig = {
   brand: {
@@ -55,6 +52,7 @@ export const siteConfig: SiteConfig = {
     hero: true,
     booking: true,
     services: true,
+    gallery: true,
     process: true,
     prices: true,
     team: true,
@@ -68,20 +66,19 @@ export const siteConfig: SiteConfig = {
     footer: true,
   },
 
-  // NB: href må matche Section id i komponentene
-  nav: [
-    { href: "#tjenester", label: { no: "Tjenester", en: "Services" } },
-    { href: "#priser", label: { no: "Priser", en: "Pricing" } },
-    { href: "#prosess", label: { no: "Prosess", en: "Process" } },
-    { href: "#anmeldelser", label: { no: "Anmeldelser", en: "Reviews" } },
-    { href: "#faq", label: { no: "FAQ", en: "FAQ" } },
-    { href: "#kontakt", label: { no: "Kontakt", en: "Contact" } },
-  ],
+nav: [
+  { href: "#overnatting", label: { no: "Overnatting", en: "Accommodation" } },
+  { href: "#opplevelser", label: { no: "Opplevelser", en: "Experiences" } },
+  { href: "#galleri", label: { no: "Galleri", en: "Gallery" } },
+  { href: "#faq", label: { no: "FAQ", en: "FAQ" } },
+  { href: "#kontakt", label: { no: "Kontakt", en: "Contact" } },
+],
 
-  // Seksjoner (importert)
   hero,
   bookingSection,
   servicesSection,
+  accommodationSection,
+  gallerySection,
   pricesSection,
   processSection,
   teamSection,

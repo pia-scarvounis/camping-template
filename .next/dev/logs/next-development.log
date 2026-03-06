@@ -1,285 +1,110 @@
-[00:00:00.593] Server  LOG     ✓ Ready in 437ms
-[00:00:05.535] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:47.061] Server  LOG     ✓ Compiled in 223ms
-[00:01:18.426] Server  LOG     ✓ Compiled in 30ms
-[00:03:15.703] Server  LOG     ✓ Compiled in 33ms
-[00:03:36.466] Browser WARN    Image with src "/images/ins2.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:36.466] Browser WARN    Image with src "/images/ins4.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:36.466] Browser WARN    Image with src "/images/ins1.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:52.449] Browser WARN    Image with src "/images/why-us.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:17:43.671] Server  LOG     ✓ Compiled in 26ms
-[00:18:19.453] Server  LOG     ✓ Compiled in 19ms
-[00:22:00.268] Server  LOG     ✓ Compiled in 33ms
-[00:27:43.638] Server  LOG     ✓ Compiled in 21ms
-[00:27:46.042] Browser WARN    Image with src "/icons/bil-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:27:46.042] Browser WARN    Image with src "/icons/wifi-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:39:59.540] Server  LOG     ✓ Compiled in 17ms
-[00:42:45.050] Browser ERROR   ./app/page.tsx:22:12
+[00:00:00.706] Server  LOG     ✓ Ready in 537ms
+[00:00:04.771] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:04.939] Browser WARN    Image with src "/icons/wifi-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:04.939] Browser WARN    Image with src "/icons/bil-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:04.939] Browser WARN    Image with src "/images/camping.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:04.939] Browser WARN    Image with src "/images/telt.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:04.939] Browser WARN    Image with src "/images/hytter.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:04.939] Browser WARN    Image with src "/images/leiligheter.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:05.800] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/opplevelser.png" "received" null
+[00:00:58.993] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:59.156] Browser WARN    Image with src "/icons/wifi-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:59.156] Browser WARN    Image with src "/icons/bil-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:59.156] Browser WARN    Image with src "/images/camping.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:59.156] Browser WARN    Image with src "/images/telt.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:59.156] Browser WARN    Image with src "/images/hytter.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:59.156] Browser WARN    Image with src "/images/leiligheter.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:03:46.943] Server  LOG     ✓ Compiled in 56ms
+[00:03:50.193] Server  LOG     ✓ Compiled in 20ms
+[00:04:03.922] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Home`.
+[00:04:04.906] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:04:04.978] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:46.023] Browser WARN    Image with src "/icons/bil-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:06:46.023] Browser WARN    Image with src "/icons/wifi-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:06:46.023] Browser WARN    Image with src "/images/hytter.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:46.023] Browser WARN    Image with src "/images/leiligheter.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:46.023] Browser WARN    Image with src "/images/camping.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:46.023] Browser WARN    Image with src "/images/telt.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:36:10.923] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Home`.
+[00:36:11.291] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:36:11.426] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:36:14.649] Browser WARN    Image with src "/icons/wifi-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:36:14.649] Browser WARN    Image with src "/icons/bil-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:36:14.813] Browser WARN    Image with src "/images/leiligheter.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:36:14.813] Browser WARN    Image with src "/images/camping.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:36:14.813] Browser WARN    Image with src "/images/hytter.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:36:14.813] Browser WARN    Image with src "/images/telt.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:54:29.458] Server  LOG     ✓ Compiled in 41ms
+[02:01:16.693] Server  LOG     ✓ Compiled in 26ms
+[02:05:18.123] Server  LOG     ✓ Compiled in 49ms
+[02:06:02.780] Server  LOG     ✓ Compiled in 40ms
+[02:06:02.887] Browser ERROR   ./app/page.tsx:13:1
 Parsing ecmascript source code failed
-  20 | <Hero />
-  21 | <Booking
-> 22 | <Services />
-     |            ^
-  23 | <Prices />
-  24 | <Team />
-  25 | <Process />
+  11 | import FAQ from "@/components/sections/FAQ";
+  12 | import 
+> 13 | import Contact from "@/components/sections/Contact";
+     | ^^^^^^
+  14 | import Footer from "@/components/sections/Footer";
+  15 |
+  16 | export default function Home() {
+
+Expected 'from', got 'import'
+[02:06:07.828] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:06:32.117] Browser ERROR   ./app/page.tsx:29:11
+Parsing ecmascript source code failed
+  27 | <FAQ />
+  28 | <
+> 29 | <Contact />
+     |           ^
+  30 | <Footer />
+  31 |
+  32 |     </main>
 
 Expression expected
-[00:42:47.045] Browser ERROR   ./app/page.tsx:22:12
+[02:06:32.117] Browser ERROR   ./app/page.tsx:32:6
 Parsing ecmascript source code failed
-  20 | <Hero />
-  21 | <BookingBar 
-> 22 | <Services />
-     |            ^
-  23 | <Prices />
-  24 | <Team />
-  25 | <Process />
-
-Expression expected
-[00:42:56.045] Browser ERROR   ./app/page.tsx:23:12
-Parsing ecmascript source code failed
-  21 | <BookingBar />
-  22 | <
-> 23 | <Services />
-     |            ^
-  24 | <Prices />
-  25 | <Team />
-  26 | <Process />
-
-Expression expected
-[00:42:59.045] Browser ERROR   ./app/page.tsx:23:12
-Parsing ecmascript source code failed
-  21 | <BookingBar />
-  22 | <Am
-> 23 | <Services />
-     |            ^
-  24 | <Prices />
-  25 | <Team />
-  26 | <Process />
-
-Expression expected
-[00:43:04.045] Browser ERROR   ./app/page.tsx:23:12
-Parsing ecmascript source code failed
-  21 | <BookingBar />
-  22 | <Amenities
-> 23 | <Services />
-     |            ^
-  24 | <Prices />
-  25 | <Team />
-  26 | <Process />
-
-Expression expected
-[00:43:13.267] Browser WARN    Image with src "/icons/bil-ikon.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:43:13.267] Browser WARN    Image with src "/icons/wifi-ikon.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:45:47.270] Server  ERROR   ⨯ ReferenceError: Amenities is not defined
-[00:45:47.392] Browser ERROR   uncaughtError: ReferenceError: Amenities is not defined
-[00:45:50.188] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:45:50.318] Browser WARN    Image with src "/icons/wifi-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:45:50.318] Browser WARN    Image with src "/icons/bil-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:45:52.803] Browser WARN    Image with src "/images/ins1.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:45:52.803] Browser WARN    Image with src "/images/ins2.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:45:52.803] Browser WARN    Image with src "/images/ins4.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:09:14.828] Server  LOG     ✓ Compiled in 17ms
-[01:09:15.050] Browser ERROR   ./src/data/siteConfig.ts:83:3
-Parsing ecmascript source code failed
-  81 |   hero,
-  82 |   booking
-> 83 |   servicesSection,
-     |   ^^^^^^^^^^^^^^^
-  84 |   pricesSection,
-  85 |   processSection,
-  86 |   teamSection,
-
-Unexpected token `servicesSection`. Expected ... , *,  (, [, :, , ?, =, an identifier, public, protected, private, readonly, <.
-
-Import traces:
-  Client Component Browser:
-    ./src/data/siteConfig.ts [Client Component Browser]
-    ./src/components/sections/Reviews.tsx [Client Component Browser]
-    ./src/components/sections/Reviews.tsx [Server Component]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/data/siteConfig.ts [Client Component SSR]
-    ./src/components/sections/Reviews.tsx [Client Component SSR]
-    ./src/components/sections/Reviews.tsx [Server Component]
-    ./app/page.tsx [Server Component]
-[01:09:37.425] Server  LOG     ✓ Compiled in 18ms
-[01:09:42.218] Server  LOG     ✓ Compiled in 12ms
-[01:19:41.699] Server  LOG     ✓ Compiled in 31ms
-[01:21:16.407] Browser WARN    Image with src "/images/why-us.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:24:10.655] Server  LOG     ✓ Compiled in 24ms
-[01:27:52.358] Server  LOG     ✓ Compiled in 20ms
-[01:27:53.044] Browser ERROR   ./src/data/siteConfig.ts:57:5
-Parsing ecmascript source code failed
-  55 |     hero: true,
-  56 |     booking
-> 57 |     services: true,
-     |     ^^^^^^^^
-  58 |     process: true,
-  59 |     prices: true,
-  60 |     team: true,
-
-Unexpected token `services`. Expected ... , *,  (, [, :, , ?, =, an identifier, public, protected, private, readonly, <.
-
-Import traces:
-  Client Component Browser:
-    ./src/data/siteConfig.ts [Client Component Browser]
-    ./src/components/sections/Reviews.tsx [Client Component Browser]
-    ./src/components/sections/Reviews.tsx [Server Component]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/data/siteConfig.ts [Client Component SSR]
-    ./src/components/sections/Reviews.tsx [Client Component SSR]
-    ./src/components/sections/Reviews.tsx [Server Component]
-    ./app/page.tsx [Server Component]
-[01:27:56.094] Server  LOG     ✓ Compiled in 20ms
-[01:27:57.045] Browser ERROR   ./src/data/siteConfig.ts:57:13
-Parsing ecmascript source code failed
-  55 |     hero: true,
-  56 |     bookin: true.
-> 57 |     services: true,
-     |             ^
-  58 |     process: true,
-  59 |     prices: true,
-  60 |     team: true,
-
-Expected ',', got ':'
-
-Import traces:
-  Client Component Browser:
-    ./src/data/siteConfig.ts [Client Component Browser]
-    ./src/components/sections/Reviews.tsx [Client Component Browser]
-    ./src/components/sections/Reviews.tsx [Server Component]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/data/siteConfig.ts [Client Component SSR]
-    ./src/components/sections/Reviews.tsx [Client Component SSR]
-    ./src/components/sections/Reviews.tsx [Server Component]
-    ./app/page.tsx [Server Component]
-[01:28:04.470] Server  LOG     ✓ Compiled in 26ms
-[01:30:39.469] Server  LOG     ✓ Compiled in 31ms
-[01:31:31.152] Server  LOG     ✓ Compiled in 24ms
-[01:32:16.216] Server  LOG     ✓ Compiled in 29ms
-[01:32:17.045] Browser ERROR   ./src/components/sections/BookingBar.tsx:23:14
-Parsing ecmascript source code failed
-  21 |             onSubmit={(e) => e.preventDefault()}
-  22 |          className="grid grid-cols-1 sm:grid-cols-4 gap-4 p-5 sm:p-6 items-end"
-> 23 |             {booking.fields.map((field) => (
-     |              ^^^^^^^
-  24 |               <div
-  25 |                 key={field.key}
-  26 |                 className="rounded-xl border border-black/10 px-4 py-3"
-
-Expected '</', got 'booking'
-
-Import trace:
-  Server Component:
-    ./src/components/sections/BookingBar.tsx
-    ./app/page.tsx
-[01:32:38.290] Server  LOG     ✓ Compiled in 21ms
-[01:32:40.241] Server  LOG     ✓ Compiled in 18ms
-[01:36:41.780] Server  LOG     ✓ Compiled in 26ms
-[01:36:42.045] Browser ERROR   uncaughtError: ReferenceError: f is not defined
-[01:36:43.595] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[01:36:43.642] Server  LOG     ✓ Compiled in 18ms
-[01:36:43.755] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:37:07.688] Server  LOG     ✓ Compiled in 13ms
-[01:37:10.723] Browser WARN    Image with src "/icons/bil-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[01:37:10.723] Browser WARN    Image with src "/icons/wifi-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[01:37:12.329] Browser WARN    Image with src "/images/ins1.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:37:12.329] Browser WARN    Image with src "/images/ins2.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:37:12.329] Browser WARN    Image with src "/images/ins4.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:40:08.140] Server  LOG     ✓ Compiled in 22ms
-[01:43:39.398] Server  LOG     ✓ Compiled in 16ms
-[01:43:44.710] Server  LOG     ✓ Compiled in 19ms
-[01:43:52.744] Browser WARN    Image with src "/icons/wifi-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[01:43:52.744] Browser WARN    Image with src "/icons/bil-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[01:45:03.713] Server  LOG     ✓ Compiled in 21ms
-[01:45:04.046] Browser ERROR   ./src/components/sections/Hero.tsx:85:5
-Parsing ecmascript source code failed
-  83 |
-  84 |     
-> 85 |     </section>
-     |     ^
-  86 |   );
-  87 | }
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./src/components/sections/Hero.tsx
-    ./app/page.tsx
-[01:45:04.046] Browser ERROR   ./src/components/sections/Hero.tsx:85:6
-Parsing ecmascript source code failed
-  83 |
-  84 |     
-> 85 |     </section>
-     |      ^^^^^^^^^
-  86 |   );
-  87 | }
+  30 | <Footer />
+  31 |
+> 32 |     </main>
+     |      ^^^^^^
+  33 |   );
+  34 | }
+  35 |
 
 Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./src/components/sections/Hero.tsx
-    ./app/page.tsx
-[01:45:13.598] Browser WARN    Image with src "/icons/wifi-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[01:45:13.598] Browser WARN    Image with src "/icons/bil-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[01:46:08.819] Browser WARN    Image with src "/images/ins1.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:46:08.819] Browser WARN    Image with src "/images/ins2.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:47:17.644] Browser WARN    Image with src "/images/ins4.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:49:21.749] Server  LOG     ✓ Compiled in 22ms
-[01:51:16.591] Server  LOG     ✓ Compiled in 24ms
-[01:51:17.045] Browser ERROR   ./src/components/sections/Hero.tsx:55:17
+[02:06:37.242] Browser ERROR   ./app/page.tsx:30:10
 Parsing ecmascript source code failed
-  53 |           
-  54 |               {hero.secondaryCta.label[lang]}
-> 55 |             </a>
-     |                 ^
-> 56 |           </div>
-     | ^^^^^^^^^^^
-  57 |         </div>
-  58 |       </div>
-  59 |
+  28 | <Gallery <
+  29 | <Contact />
+> 30 | <Footer />
+     |          ^
+  31 |
+  32 |     </main>
+  33 |   );
 
-Expected '</', got 'jsx text (
-          )'
-
-Import trace:
-  Server Component:
-    ./src/components/sections/Hero.tsx
-    ./app/page.tsx
-[01:51:17.620] Server  LOG     ✓ Compiled in 24ms
-[01:51:18.045] Browser ERROR   ./src/components/sections/Hero.tsx:83:17
-Parsing ecmascript source code failed
-  81 | </div>
-  82 |               {hero.secondaryCta.label[lang]}
-> 83 |             </a>
-     |                 ^
-> 84 |           </div>
-     | ^^^^^^^^^^^
-  85 |         </div>
-  86 |       </div>
-  87 |
-
-Expected '</', got 'jsx text (
-          )'
-
-Import trace:
-  Server Component:
-    ./src/components/sections/Hero.tsx
-    ./app/page.tsx
-[01:52:35.754] Server  LOG     ✓ Compiled in 15ms
-[01:52:40.704] Browser WARN    Image with src "/icons/wifi-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[01:52:40.704] Browser WARN    Image with src "/icons/bil-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[01:53:35.995] Browser WARN    Image with src "/images/ins2.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:53:35.995] Browser WARN    Image with src "/images/ins1.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:53:36.602] Browser WARN    Image with src "/images/ins4.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:58:17.502] Server  LOG     ✓ Compiled in 35ms
-[01:59:46.109] Server  LOG     ✓ Compiled in 16ms
-[01:59:47.309] Server  LOG     ✓ Compiled in 21ms
+Expression expected
+[02:06:40.511] Browser WARN    Image with src "/images/1.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[02:06:51.773] Browser WARN    Image with src "/images/leiligheter.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:06:51.774] Browser WARN    Image with src "/images/camping.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:06:51.774] Browser WARN    Image with src "/images/telt.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:06:51.774] Browser WARN    Image with src "/images/hytter.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:07:07.984] Server  LOG     ✓ Compiled in 21ms
+[02:07:35.662] Server  LOG     ✓ Compiled in 11ms
+[02:07:44.735] Browser WARN    Image with src "/icons/bil-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:07:44.735] Browser WARN    Image with src "/icons/wifi-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:10:20.197] Server  LOG     ✓ Compiled in 16ms
+[02:10:56.482] Server  LOG     ✓ Compiled in 17ms
+[02:11:34.042] Server  LOG     ✓ Compiled in 24ms
+[02:12:49.326] Server  LOG     ✓ Compiled in 23ms
+[02:12:53.997] Server  LOG     ✓ Compiled in 13ms
+[02:13:05.100] Server  LOG     ✓ Compiled in 18ms
+[02:14:04.566] Server  LOG     ✓ Compiled in 19ms
+[02:14:48.327] Server  LOG     ✓ Compiled in 14ms
+[02:15:04.658] Server  LOG     ✓ Compiled in 22ms
+[02:15:08.281] Server  LOG     ✓ Compiled in 8ms
+[02:24:39.812] Server  LOG     ✓ Compiled in 28ms

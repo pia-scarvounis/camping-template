@@ -1,18 +1,30 @@
 import type { WhyUsSection } from "./types";
-import SectionHeader from "@/components/ui/SectionHeader";
+
+/*
+  Denne seksjonen brukes som "Opplevelser" i camping-malen
+*/
 
 export const whyUsSection: WhyUsSection = {
-  title: { no: "Hvorfor velge oss?", en: "Why choose us?" },
+  title: { 
+    no: "Opplevelser", 
+    en: "Experiences" 
+  },
+
   lead: {
-    no: "Tydelig plan, god oppfølging og en løsning tilpasset dine mål.",
-    en: "A clear plan, great follow-up, and a solution tailored to your goals.",
+    no: "Opplev naturen rundt oss med aktiviteter for både store og små.",
+    en: "Experience the surrounding nature with activities for all ages.",
   },
+
   points: {
-    no: ["Tydelig prosess", "Rask respons", "Fleksible løsninger"],
-    en: ["Clear process", "Fast response", "Flexible solutions"],
+    no: ["Kajakk", "Ridning", "Fjellturer"],
+    en: ["Kayaking", "Horse riding", "Hiking"],
   },
+
   image: {
-    src: "/images/why-us.png",
-    alt: { no: "Illustrasjonsbilde", en: "Illustration image" },
+    src: "/images/opplevelser.png",
+    alt: { 
+      no: "Opplevelser i naturen", 
+      en: "Outdoor experiences" 
+    },
   },
 };

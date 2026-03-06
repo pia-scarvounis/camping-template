@@ -18,13 +18,13 @@ export default function Contact() {
   const email = brand.email ?? "";
 
   return (
-    <Section id="kontakt" variant="odd">
+    <Section id="kontakt" variant="white">
       <Reveal variant="heading">
         <SectionHeader
           lang={safeLang}
           title={section.title}
           lead={section.lead}
-          align="left"
+          align="center"
         />
       </Reveal>
 
