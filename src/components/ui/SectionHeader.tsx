@@ -1,12 +1,12 @@
 import React from "react";
 
-type Lang = "no" | "en";
-type Text = string | { no: string; en: string };
+type Lang = "no" | "en" | "de";
+type Text = string | { no: string; en: string; de?: string };
 
 function resolveText(value: Text | undefined, lang: Lang) {
   if (!value) return "";
   if (typeof value === "string") return value;
-  return value[lang] ?? value.no ?? "";
+  return value[lang] ?? value.en ?? value.no ?? "";
 }
 
 type Props = {
@@ -26,6 +26,7 @@ export default function SectionHeader({
 }: Props) {
   const t = resolveText(title, lang);
   const l = resolveText(lead, lang);
+
   if (!t && !l) return null;
 
   const isCenter = align === "center";
@@ -34,12 +35,10 @@ export default function SectionHeader({
     <div
       className={[
         isCenter ? "text-center mx-auto" : "text-left",
-        // mer luft over alle overskrifter globalt
         "pt-2",
         className,
       ].join(" ")}
     >
-      {/* liten “brand marker” under overskrift (high-end og konsistent) */}
       <div className={isCenter ? "mx-auto" : ""}>
         {t ? (
           <>
@@ -61,7 +60,6 @@ export default function SectionHeader({
           <p
             className={[
               "mt-4 text-base text-gray-600 sm:text-lg",
-              // bedre linjelengde
               "max-w-2xl",
               isCenter ? "mx-auto" : "",
             ].join(" ")}

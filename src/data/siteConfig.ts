@@ -33,11 +33,16 @@ export const siteConfig: SiteConfig = {
     location: "Oslo",
     logo: {
       src: "/icons/min-bedrift.svg",
-      alt: { no: "Din bedrift logo", en: "Your business logo" },
+      alt: {
+        no: "Din bedrift logo",
+        en: "Your business logo",
+        de: "Logo Ihres Unternehmens",
+      },
     },
     address: {
       no: "Karl Johans gate 1, 0154 Oslo",
       en: "Karl Johans gate 1, 0154 Oslo",
+      de: "Karl Johans gate 1, 0154 Oslo",
     },
     maps: {
       embedUrl:
@@ -66,13 +71,48 @@ export const siteConfig: SiteConfig = {
     footer: true,
   },
 
-nav: [
-  { href: "#overnatting", label: { no: "Overnatting", en: "Accommodation" } },
-  { href: "#opplevelser", label: { no: "Opplevelser", en: "Experiences" } },
-  { href: "#galleri", label: { no: "Galleri", en: "Gallery" } },
-  { href: "#faq", label: { no: "FAQ", en: "FAQ" } },
-  { href: "#kontakt", label: { no: "Kontakt", en: "Contact" } },
-],
+  nav: [
+    {
+      href: "#overnatting",
+      label: {
+        no: "Overnatting",
+        en: "Accommodation",
+        de: "Unterkunft",
+      },
+    },
+    {
+      href: "#opplevelser",
+      label: {
+        no: "Opplevelser",
+        en: "Experiences",
+        de: "Erlebnisse",
+      },
+    },
+    {
+      href: "#galleri",
+      label: {
+        no: "Galleri",
+        en: "Gallery",
+        de: "Galerie",
+      },
+    },
+    {
+      href: "#faq",
+      label: {
+        no: "FAQ",
+        en: "FAQ",
+        de: "FAQ",
+      },
+    },
+    {
+      href: "#kontakt",
+      label: {
+        no: "Kontakt",
+        en: "Contact",
+        de: "Kontakt",
+      },
+    },
+  ],
 
   hero,
   bookingSection,

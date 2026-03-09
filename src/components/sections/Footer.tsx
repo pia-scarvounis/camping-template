@@ -10,7 +10,8 @@ export default function Footer() {
 
   const { brand, footer } = siteConfig;
   const { lang } = useLanguage();
-  const safeLang: "no" | "en" = lang === "en" ? "en" : "no";
+  const safeLang: "no" | "en" | "de" =
+    lang === "en" ? "en" : lang === "de" ? "de" : "no";
 
   const [privacyOpen, setPrivacyOpen] = useState(false);
 
@@ -30,8 +31,14 @@ export default function Footer() {
     };
   }, [privacyOpen]);
 
-  const privacyTitle = footer.privacy.title[safeLang];
-  const privacyParagraphs = footer.privacy.paragraphs[safeLang];
+  const getText = (value: { no: string; en: string; de?: string }) =>
+    value[safeLang] ?? value.en;
+
+  const getList = (value: { no: string[]; en: string[]; de?: string[] }) =>
+    value[safeLang] ?? value.en;
+
+  const privacyTitle = getText(footer.privacy.title);
+  const privacyParagraphs = getList(footer.privacy.paragraphs);
 
   return (
     <>
@@ -50,19 +57,19 @@ export default function Footer() {
               <BrandMark href="#top" size="sm" />
 
               <p className="text-sm text-gray-600 leading-relaxed max-w-xs font-medium">
-                {footer.tagline[safeLang]}
+                {getText(footer.tagline)}
               </p>
             </div>
 
             {/* COLUMN 2 – Info */}
             <div className="space-y-5">
               <div className="text-xs font-semibold text-gray-500 uppercase tracking-[0.15em]">
-                {footer.infoTitle[safeLang]}
+                {getText(footer.infoTitle)}
               </div>
 
               <div className="flex flex-col gap-3 text-sm text-gray-600">
                 <span>
-                  {footer.orgLabel[safeLang]}:{" "}
+                  {getText(footer.orgLabel)}:{" "}
                   <span className="font-medium text-gray-900">
                     {footer.orgNumber}
                   </span>
@@ -75,7 +82,7 @@ export default function Footer() {
                   onClick={() => setPrivacyOpen(true)}
                   className="text-left hover:text-black transition-colors"
                 >
-                  {footer.privacyLabel[safeLang]}
+                  {getText(footer.privacyLabel)}
                 </button>
               </div>
             </div>
@@ -83,7 +90,7 @@ export default function Footer() {
             {/* COLUMN 3 – Navigation */}
             <div className="space-y-5">
               <div className="text-xs font-semibold text-gray-500 uppercase tracking-[0.15em]">
-                {footer.navTitle[safeLang]}
+                {getText(footer.navTitle)}
               </div>
 
               <button
@@ -93,7 +100,7 @@ export default function Footer() {
                 }
                 className="inline-flex items-center gap-2 text-sm font-medium text-gray-800 hover:text-black transition"
               >
-                ↑ {footer.backToTopLabel[safeLang]}
+                ↑ {getText(footer.backToTopLabel)}
               </button>
             </div>
           </div>

@@ -1,8 +1,51 @@
-[00:00:00.727] Server  LOG     ✓ Ready in 575ms
-[00:00:06.295] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:06.295] Browser WARN    Image with src "/icons/wifi-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:00:06.295] Browser WARN    Image with src "/icons/bil-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:00:06.404] Browser WARN    Image with src "/images/camping.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:06.404] Browser WARN    Image with src "/images/leiligheter.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:06.534] Browser WARN    Image with src "/images/telt.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:06.534] Browser WARN    Image with src "/images/hytter.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:00.478] Server  LOG     ✓ Ready in 339ms
+[00:00:00.842] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:16.813] Server  LOG     ✓ Compiled in 202ms
+[00:05:28.741] Browser WARN    Image with src "/images/telt.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:05:28.741] Browser WARN    Image with src "/images/leiligheter.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:05:28.741] Browser WARN    Image with src "/images/camping.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:05:28.741] Browser WARN    Image with src "/images/hytter.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:05:28.741] Browser WARN    Image with src "/icons/wifi-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:05:28.741] Browser WARN    Image with src "/icons/bil-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:09:21.450] Server  LOG     ✓ Compiled in 20ms
+[00:09:28.223] Server  LOG     ✓ Compiled in 16ms
+[00:09:46.787] Server  LOG     ✓ Compiled in 15ms
+[00:09:53.292] Server  LOG     ✓ Compiled in 9ms
+[00:12:43.986] Server  LOG     ✓ Compiled in 20ms
+[00:22:18.357] Server  LOG     ✓ Compiled in 36ms
+[00:23:31.542] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Home`.
+[00:23:37.105] Server  LOG     ✓ Compiled in 27ms
+[00:23:37.106] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:23:37.179] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:29:46.934] Server  LOG     ✓ Compiled in 36ms
+[00:32:26.989] Browser WARN    Image with src "/icons/wifi-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:32:26.989] Browser WARN    Image with src "/images/camping.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:32:26.989] Browser WARN    Image with src "/images/telt.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:32:26.989] Browser WARN    Image with src "/icons/bil-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:32:26.989] Browser WARN    Image with src "/images/hytter.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:32:26.989] Browser WARN    Image with src "/images/leiligheter.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:35:28.509] Server  LOG     ✓ Compiled in 28ms
+[00:58:51.828] Server  LOG     ✓ Compiled in 26ms
+[01:01:20.888] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Home`.
+[01:01:21.805] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:01:21.895] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:01:22.070] Browser WARN    Image with src "/icons/wifi-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:01:22.070] Browser WARN    Image with src "/icons/bil-ikon.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:01:22.070] Browser WARN    Image with src "/images/camping.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:01:22.070] Browser WARN    Image with src "/images/telt.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:01:22.070] Browser WARN    Image with src "/images/hytter.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:01:22.070] Browser WARN    Image with src "/images/leiligheter.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:05:34.723] Server  LOG     ✓ Compiled in 39ms
+[01:06:02.329] Server  LOG     ✓ Compiled in 12ms
+[01:09:31.108] Server  LOG     ✓ Compiled in 36ms
+[01:10:32.459] Server  LOG     ✓ Compiled in 41ms
+[01:11:34.741] Server  LOG     ✓ Compiled in 47ms
+[01:19:49.598] Server  LOG     ✓ Compiled in 45ms
+[01:22:40.364] Server  LOG     ✓ Compiled in 25ms
+[01:23:22.457] Server  LOG     ✓ Compiled in 16ms
+[01:24:10.635] Server  LOG     ✓ Compiled in 16ms
+[01:29:30.733] Server  LOG     ✓ Compiled in 42ms

@@ -11,9 +11,18 @@ export default function WhyUs() {
   if (!siteConfig.features.whyUs) return null;
 
   const { lang } = useLanguage();
-  const safeLang: "no" | "en" = lang === "en" ? "en" : "no";
+  const safeLang: "no" | "en" | "de" =
+    lang === "en" ? "en" : lang === "de" ? "de" : "no";
 
   const section = siteConfig.whyUsSection;
+
+  const getText = (value: { no: string; en: string; de?: string }) =>
+    value[safeLang] ?? value.en;
+
+  const getList = (value: { no: string[]; en: string[]; de?: string[] }) =>
+    value[safeLang] ?? value.en;
+
+  const points = getList(section.points);
 
   return (
     <Section id="opplevelser" variant="even">
@@ -33,7 +42,7 @@ export default function WhyUs() {
       <div className="mt-12 overflow-hidden rounded-3xl shadow-xl">
         <Image
           src={section.image.src}
-          alt={section.image.alt[safeLang]}
+          alt={getText(section.image.alt)}
           width={1600}
           height={700}
           className="h-auto w-full object-cover"
@@ -42,11 +51,11 @@ export default function WhyUs() {
 
       {/* Opplevelser under bildet – mer premium */}
       <div className="mt-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-[11px] sm:text-sm font-medium tracking-[0.18em] text-gray-700 uppercase">
-        {section.points[safeLang].map((item, index) => (
+        {points.map((item, index) => (
           <div key={item} className="flex items-center gap-4 sm:gap-6">
             <span>{item}</span>
 
-            {index !== section.points[safeLang].length - 1 && (
+            {index !== points.length - 1 && (
               <span className="inline-block h-[5px] w-[5px] rounded-full bg-gray-400" />
             )}
           </div>

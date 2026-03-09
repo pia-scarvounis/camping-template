@@ -10,7 +10,8 @@ export default function Contact() {
   if (!siteConfig.features.contact) return null;
 
   const { lang } = useLanguage();
-  const safeLang: "no" | "en" = lang === "en" ? "en" : "no";
+  const safeLang: "no" | "en" | "de" =
+    lang === "en" ? "en" : lang === "de" ? "de" : "no";
 
   const section = siteConfig.contactSection;
   const brand = siteConfig.brand;
@@ -28,15 +29,17 @@ export default function Contact() {
         />
       </Reveal>
 
-      {/* Øverst: samme oppsett som før (kontaktinfo + kart) */}
       <div className="mt-10 grid gap-6 lg:grid-cols-2 lg:items-stretch">
-        {/* Venstre: kontaktinfo */}
         <div className="rounded-2xl border border-black/5 bg-white p-6 sm:p-8">
           <div className="space-y-3 text-sm text-gray-700">
             {section.show.phone && brand.phone && (
               <p>
                 <span className="font-medium">
-                  {safeLang === "no" ? "Telefon" : "Phone"}:
+                  {safeLang === "no"
+                    ? "Telefon"
+                    : safeLang === "en"
+                    ? "Phone"
+                    : "Telefon"}:
                 </span>{" "}
                 {brand.phone}
               </p>
@@ -45,7 +48,11 @@ export default function Contact() {
             {section.show.email && brand.email && (
               <p>
                 <span className="font-medium">
-                  {safeLang === "no" ? "E-post" : "Email"}:
+                  {safeLang === "no"
+                    ? "E-post"
+                    : safeLang === "en"
+                    ? "Email"
+                    : "E-Mail"}:
                 </span>{" "}
                 <a
                   href={`mailto:${brand.email}`}
@@ -59,14 +66,17 @@ export default function Contact() {
             {section.show.address && brand.address?.[safeLang] && (
               <p>
                 <span className="font-medium">
-                  {safeLang === "no" ? "Adresse" : "Address"}:
+                  {safeLang === "no"
+                    ? "Adresse"
+                    : safeLang === "en"
+                    ? "Address"
+                    : "Adresse"}:
                 </span>{" "}
                 {brand.address[safeLang]}
               </p>
             )}
           </div>
 
-          {/* Knapp til kart */}
           {brand.maps?.link && (
             <div className="mt-6">
               <a
@@ -75,35 +85,49 @@ export default function Contact() {
                 rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-full bg-[var(--brand)] px-5 py-3 text-sm font-medium text-white hover:opacity-90 transition"
               >
-                {safeLang === "no" ? "Åpne i kart" : "Open in maps"}
+                {safeLang === "no"
+                  ? "Åpne i kart"
+                  : safeLang === "en"
+                  ? "Open in maps"
+                  : "In Karten öffnen"}
               </a>
             </div>
           )}
         </div>
 
-        {/* Høyre: kart */}
         {section.show.map && brand.maps?.embedUrl && (
           <div className="overflow-hidden rounded-2xl border border-black/5 bg-white min-h-[320px]">
             <iframe
               src={brand.maps.embedUrl}
               className="h-full w-full min-h-[320px]"
               loading="lazy"
-              title={safeLang === "no" ? "Kart" : "Map"}
+              title={
+                safeLang === "no"
+                  ? "Kart"
+                  : safeLang === "en"
+                  ? "Map"
+                  : "Karte"
+              }
             />
           </div>
         )}
       </div>
 
-      {/* Under: kontaktskjema (nytt, men matcher designet) */}
       <div className="mt-8 rounded-2xl border border-black/5 bg-white p-6 sm:p-8">
         <h3 className="text-base sm:text-lg font-semibold text-gray-900">
-          {safeLang === "no" ? "Send oss en melding" : "Send us a message"}
+          {safeLang === "no"
+            ? "Send oss en melding"
+            : safeLang === "en"
+            ? "Send us a message"
+            : "Senden Sie uns eine Nachricht"}
         </h3>
 
         <p className="mt-2 text-sm text-gray-600">
           {safeLang === "no"
             ? "Dette skjemaet åpner e-postprogrammet ditt (ingen backend i v1)."
-            : "This form opens your email client (no backend in v1)."}
+            : safeLang === "en"
+            ? "This form opens your email client (no backend in v1)."
+            : "Dieses Formular öffnet Ihr E-Mail-Programm (kein Backend in v1)."}
         </p>
 
         <form
@@ -114,50 +138,86 @@ export default function Contact() {
         >
           <div>
             <label className="block text-sm font-medium text-gray-700">
-              {safeLang === "no" ? "Navn" : "Name"}
+              {safeLang === "no"
+                ? "Navn"
+                : safeLang === "en"
+                ? "Name"
+                : "Name"}
             </label>
             <input
               name="name"
               className="mt-2 w-full rounded-lg border border-black/10 bg-white px-3 py-2.5 text-sm outline-none focus:ring-2 focus:ring-[var(--brand)]/30"
-              placeholder={safeLang === "no" ? "Ditt navn" : "Your name"}
+              placeholder={
+                safeLang === "no"
+                  ? "Ditt navn"
+                  : safeLang === "en"
+                  ? "Your name"
+                  : "Ihr Name"
+              }
             />
           </div>
 
           <div>
             <label className="block text-sm font-medium text-gray-700">
-              {safeLang === "no" ? "Telefon" : "Phone"}
+              {safeLang === "no"
+                ? "Telefon"
+                : safeLang === "en"
+                ? "Phone"
+                : "Telefon"}
             </label>
             <input
               name="phone"
               className="mt-2 w-full rounded-lg border border-black/10 bg-white px-3 py-2.5 text-sm outline-none focus:ring-2 focus:ring-[var(--brand)]/30"
               placeholder={
-                safeLang === "no" ? "Ditt telefonnummer" : "Your phone number"
+                safeLang === "no"
+                  ? "Ditt telefonnummer"
+                  : safeLang === "en"
+                  ? "Your phone number"
+                  : "Ihre Telefonnummer"
               }
             />
           </div>
 
           <div className="sm:col-span-2">
             <label className="block text-sm font-medium text-gray-700">
-              {safeLang === "no" ? "E-post" : "Email"}
+              {safeLang === "no"
+                ? "E-post"
+                : safeLang === "en"
+                ? "Email"
+                : "E-Mail"}
             </label>
             <input
               name="email"
               type="email"
               className="mt-2 w-full rounded-lg border border-black/10 bg-white px-3 py-2.5 text-sm outline-none focus:ring-2 focus:ring-[var(--brand)]/30"
-              placeholder={safeLang === "no" ? "din@epost.no" : "you@email.com"}
+              placeholder={
+                safeLang === "no"
+                  ? "din@epost.no"
+                  : safeLang === "en"
+                  ? "you@email.com"
+                  : "ihre@email.de"
+              }
             />
           </div>
 
           <div className="sm:col-span-2">
             <label className="block text-sm font-medium text-gray-700">
-              {safeLang === "no" ? "Melding" : "Message"}
+              {safeLang === "no"
+                ? "Melding"
+                : safeLang === "en"
+                ? "Message"
+                : "Nachricht"}
             </label>
             <textarea
               name="message"
               rows={6}
               className="mt-2 w-full rounded-lg border border-black/10 bg-white px-3 py-2.5 text-sm outline-none focus:ring-2 focus:ring-[var(--brand)]/30 resize-none"
               placeholder={
-                safeLang === "no" ? "Skriv meldingen din her…" : "Write your message here…"
+                safeLang === "no"
+                  ? "Skriv meldingen din her…"
+                  : safeLang === "en"
+                  ? "Write your message here…"
+                  : "Schreiben Sie hier Ihre Nachricht…"
               }
             />
           </div>
@@ -167,9 +227,21 @@ export default function Contact() {
               type="submit"
               className="inline-flex w-full items-center justify-center rounded-full bg-[var(--brand)] px-6 py-3 text-sm font-medium text-white hover:opacity-90 transition"
               disabled={!email}
-              title={!email ? "Mangler e-post i siteConfig.brand.email" : undefined}
+              title={
+                !email
+                  ? safeLang === "no"
+                    ? "Mangler e-post i siteConfig.brand.email"
+                    : safeLang === "en"
+                    ? "Missing email in siteConfig.brand.email"
+                    : "E-Mail in siteConfig.brand.email fehlt"
+                  : undefined
+              }
             >
-              {safeLang === "no" ? "Send melding" : "Send message"}
+              {safeLang === "no"
+                ? "Send melding"
+                : safeLang === "en"
+                ? "Send message"
+                : "Nachricht senden"}
             </button>
           </div>
         </form>

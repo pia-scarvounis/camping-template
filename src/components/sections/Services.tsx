@@ -9,14 +9,17 @@ export default function Services() {
   if (!siteConfig.features.services) return null;
 
   const { lang } = useLanguage();
-  const safeLang: "no" | "en" = lang === "en" ? "en" : "no";
+  const safeLang: "no" | "en" | "de" =
+    lang === "en" ? "en" : lang === "de" ? "de" : "no";
 
   const section = siteConfig.servicesSection;
   const services = section.items;
 
+  const getText = (value: { no: string; en: string; de?: string }) =>
+    value[safeLang] ?? value.en;
+
   return (
     <Section id="tjenester" variant="even">
-      {/* Grid (4 bokser) */}
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {services.map((service, index) => {
           const isFeatured =
@@ -26,35 +29,44 @@ export default function Services() {
             <div
               key={index}
               className={[
-                "rounded-3xl p-8 sm:p-10 flex flex-col items-center justify-center text-center transition",
+                "rounded-3xl border p-8 sm:p-9 text-center transition",
                 isFeatured
-                  ? "bg-[var(--brand)] text-white shadow-xl border border-transparent"
-                  : "bg-white border border-black/5 hover:shadow-sm",
+                  ? "bg-[var(--brand)] text-white shadow-xl border-transparent"
+                  : "bg-white border-black/5 shadow-sm hover:shadow-lg",
               ].join(" ")}
             >
               {service.icon && (
-                <Image
-                  src={service.icon.src}
-                  alt={service.icon.alt[safeLang]}
-                  width={44}
-                  height={44}
-                  className={[
-                    "mb-4 object-contain",
-                    isFeatured ? "brightness-0 invert" : "opacity-90",
-                  ].join(" ")}
-                />
+                <div className="mb-5 flex justify-center">
+                  <Image
+                    src={service.icon.src}
+                    alt={getText(service.icon.alt)}
+                    width={44}
+                    height={44}
+                    className={[
+                      "object-contain",
+                      isFeatured ? "brightness-0 invert" : "opacity-90",
+                    ].join(" ")}
+                  />
+                </div>
               )}
 
               <h3
                 className={[
-                  "text-sm sm:text-base font-semibold",
+                  "text-base sm:text-lg font-semibold",
                   isFeatured ? "text-white" : "text-[var(--brand)]",
                 ].join(" ")}
               >
-                {service.title[safeLang]}
+                {getText(service.title)}
               </h3>
 
-              {/* Vi viser ikke description/price/bullets/cta i camping-varianten */}
+              <p
+                className={[
+                  "mt-3 text-sm leading-relaxed",
+                  isFeatured ? "text-white/85" : "text-gray-600",
+                ].join(" ")}
+              >
+                {getText(service.description)}
+              </p>
             </div>
           );
         })}

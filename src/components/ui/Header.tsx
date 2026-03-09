@@ -9,13 +9,29 @@ import { siteConfig } from "@/config";
 export default function Header() {
   const [open, setOpen] = useState(false);
   const { lang } = useLanguage();
-  const safeLang: "no" | "en" = lang === "en" ? "en" : "no";
+  const safeLang: "no" | "en" | "de" =
+    lang === "en" ? "en" : lang === "de" ? "de" : "no";
 
   const t = useMemo(
     () => ({
-      menu: safeLang === "no" ? "Meny" : "Menu",
-      close: safeLang === "no" ? "Lukk" : "Close",
-      contact: safeLang === "no" ? "Kontakt oss" : "Contact us",
+      menu:
+        safeLang === "no"
+          ? "Meny"
+          : safeLang === "de"
+          ? "Menü"
+          : "Menu",
+      close:
+        safeLang === "no"
+          ? "Lukk"
+          : safeLang === "de"
+          ? "Schließen"
+          : "Close",
+      contact:
+        safeLang === "no"
+          ? "Kontakt oss"
+          : safeLang === "de"
+          ? "Kontaktieren Sie uns"
+          : "Contact us",
     }),
     [safeLang]
   );
@@ -24,10 +40,8 @@ export default function Header() {
     <>
       <header className="sticky top-0 z-50 bg-[var(--header-bg)] text-[var(--header-text)] border-b border-[var(--header-border)]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          {/* Litt høyere for “premium” følelse */}
           <div className="flex items-center h-20 lg:h-24">
-            {/* Logo: be BrandMark bruke hvit variant i header */}
-          <BrandMark href="#top" size="md" />
+            <BrandMark href="#top" size="md" />
 
             <nav className="hidden lg:flex flex-1 justify-center gap-8">
               {siteConfig.nav.map((item) => (
@@ -43,7 +57,6 @@ export default function Header() {
 
             <div className="ml-auto flex items-center gap-4">
               <div className="hidden lg:block">
-                {/* Toggle: hvit / dempet hvit */}
                 <LanguageToggle variant="header" />
               </div>
 

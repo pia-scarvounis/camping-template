@@ -17,11 +17,13 @@
 export type LocalizedText = {
   no: string;
   en: string;
+  de?: string;
 };
 
 export type LocalizedList = {
   no: string[];
   en: string[];
+  de?: string[];
 };
 
 // -------------------------------------------------
@@ -164,6 +166,7 @@ export type ProcessStep = {
 export type LocalizedProcess = {
   no: ProcessStep[];
   en: ProcessStep[];
+  de?: ProcessStep[];
 };
 
 export type ProcessSection = {

@@ -22,7 +22,9 @@ function LanguageProvider({ children }) {
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "LanguageProvider.useEffect": ()=>{
             const saved = window.localStorage.getItem("lang");
-            if (saved === "no" || saved === "en") setLangState(saved);
+            if (saved === "no" || saved === "en" || saved === "de") {
+                setLangState(saved);
+            }
         }
     }["LanguageProvider.useEffect"], []);
     const setLang = (next)=>{
@@ -42,8 +44,8 @@ function LanguageProvider({ children }) {
         children: children
     }, void 0, false, {
         fileName: "[project]/src/context/LanguageContext.tsx",
-        lineNumber: 30,
-        columnNumber: 10
+        lineNumber: 34,
+        columnNumber: 5
     }, this);
 }
 _s(LanguageProvider, "45YbPMh0pFuP8DYGyDK6wcA1DGY=");
@@ -51,7 +53,9 @@ _c = LanguageProvider;
 function useLanguage() {
     _s1();
     const ctx = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useContext"])(LanguageContext);
-    if (!ctx) throw new Error("useLanguage must be used within a LanguageProvider");
+    if (!ctx) {
+        throw new Error("useLanguage must be used within a LanguageProvider");
+    }
     return ctx;
 }
 _s1(useLanguage, "/dMy7t63NXD4eYACoT93CePwGrg=");

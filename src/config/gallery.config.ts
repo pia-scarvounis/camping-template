@@ -8,11 +8,13 @@ export const gallerySection: {
   heading: {
     no: "Galleri",
     en: "Gallery",
+    de: "Galerie",
   },
 
   subtext: {
     no: "Et lite innblikk i livet på Fjellcamp.",
     en: "A glimpse of life at Fjellcamp.",
+    de: "Ein kleiner Einblick in das Leben bei Fjellcamp.",
   },
 
   images: [

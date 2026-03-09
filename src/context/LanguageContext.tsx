@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
 
-export type Language = "no" | "en";
+export type Language = "no" | "en" | "de";
 
 type LanguageContextValue = {
   lang: Language;
@@ -17,7 +17,10 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   // Husk valg i nettleseren
   useEffect(() => {
     const saved = window.localStorage.getItem("lang");
-    if (saved === "no" || saved === "en") setLangState(saved);
+
+    if (saved === "no" || saved === "en" || saved === "de") {
+      setLangState(saved);
+    }
   }, []);
 
   const setLang = (next: Language) => {
@@ -27,11 +30,17 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   const value = useMemo(() => ({ lang, setLang }), [lang]);
 
-  return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
+  return (
+    <LanguageContext.Provider value={value}>
+      {children}
+    </LanguageContext.Provider>
+  );
 }
 
 export function useLanguage() {
   const ctx = useContext(LanguageContext);
-  if (!ctx) throw new Error("useLanguage must be used within a LanguageProvider");
+  if (!ctx) {
+    throw new Error("useLanguage must be used within a LanguageProvider");
+  }
   return ctx;
 }

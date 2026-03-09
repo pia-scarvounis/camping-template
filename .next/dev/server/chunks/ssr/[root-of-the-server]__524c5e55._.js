@@ -25,7 +25,9 @@ function LanguageProvider({ children }) {
     // Husk valg i nettleseren
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         const saved = window.localStorage.getItem("lang");
-        if (saved === "no" || saved === "en") setLangState(saved);
+        if (saved === "no" || saved === "en" || saved === "de") {
+            setLangState(saved);
+        }
     }, []);
     const setLang = (next)=>{
         setLangState(next);
@@ -42,13 +44,15 @@ function LanguageProvider({ children }) {
         children: children
     }, void 0, false, {
         fileName: "[project]/src/context/LanguageContext.tsx",
-        lineNumber: 30,
-        columnNumber: 10
+        lineNumber: 34,
+        columnNumber: 5
     }, this);
 }
 function useLanguage() {
     const ctx = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useContext"])(LanguageContext);
-    if (!ctx) throw new Error("useLanguage must be used within a LanguageProvider");
+    if (!ctx) {
+        throw new Error("useLanguage must be used within a LanguageProvider");
+    }
     return ctx;
 }
 }),

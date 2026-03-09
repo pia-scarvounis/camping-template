@@ -1,11 +1,18 @@
 import type { ContactSection } from "./types";
 
 export const contactSection: ContactSection = {
-  title: { no: "Kontakt", en: "Contact" },
+  title: {
+    no: "Kontakt",
+    en: "Contact",
+    de: "Kontakt",
+  },
+
   lead: {
     no: "Ta kontakt hvis du vil bestille, spørre om noe, eller få et tilbud.",
     en: "Get in touch to book, ask a question, or request a quote.",
+    de: "Kontaktieren Sie uns, wenn Sie buchen möchten, Fragen haben oder ein Angebot wünschen.",
   },
+
   show: {
     phone: true,
     email: true,

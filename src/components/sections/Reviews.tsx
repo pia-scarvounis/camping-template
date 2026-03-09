@@ -10,17 +10,25 @@ export default function Reviews() {
   if (!siteConfig.features.reviews) return null;
 
   const { lang } = useLanguage();
-  const safeLang: "no" | "en" = lang === "en" ? "en" : "no";
+  const safeLang: "no" | "en" | "de" =
+    lang === "en" ? "en" : lang === "de" ? "de" : "no";
 
   const section = siteConfig.reviewsSection;
   const items = section.items ?? [];
 
   if (items.length === 0) return null;
 
+  const getText = (value: { no: string; en: string; de?: string }) =>
+    value[safeLang] ?? value.en;
+
   return (
     <Section id="anmeldelser" variant="odd">
       <Reveal variant="heading">
-        <SectionHeader lang={safeLang} title={section.title} lead={section.lead} />
+        <SectionHeader
+          lang={safeLang}
+          title={section.title}
+          lead={section.lead}
+        />
       </Reveal>
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -36,11 +44,11 @@ export default function Reviews() {
             )}
 
             <p className="mt-3 text-sm text-gray-700 leading-relaxed">
-              “{r.text[safeLang]}”
+              “{getText(r.text)}”
             </p>
 
             <p className="mt-4 text-sm font-semibold text-gray-900">
-              {r.name[safeLang]}
+              {getText(r.name)}
             </p>
           </div>
         ))}

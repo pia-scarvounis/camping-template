@@ -11,11 +11,15 @@ export default function FAQ() {
   if (!siteConfig.faqSection) return null;
 
   const { lang } = useLanguage();
-  const safeLang: "no" | "en" = lang === "en" ? "en" : "no";
+  const safeLang: "no" | "en" | "de" =
+    lang === "en" ? "en" : lang === "de" ? "de" : "no";
 
   const section = siteConfig.faqSection;
   const items = section.items ?? [];
   if (items.length === 0) return null;
+
+  const getText = (value: { no: string; en: string; de?: string }) =>
+    value[safeLang] ?? value.en;
 
   return (
     <Section id="faq" variant="even">
@@ -33,15 +37,15 @@ export default function FAQ() {
 
       {/* FAQ box – i midten */}
       <div className="mx-auto mt-10 max-w-3xl">
-        <div className="divide-y divide-black/5 rounded-3xl border border-black/5 bg-white shadow-sm overflow-hidden">
+        <div className="divide-y divide-black/5 overflow-hidden rounded-3xl border border-black/5 bg-white shadow-sm">
           {items.map((item, index) => (
             <details
               key={`${item.question.no}-${index}`}
-              className="group px-6 sm:px-8 py-6"
+              className="group px-6 py-6 sm:px-8"
             >
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4">
                 <h3 className="text-base font-semibold text-gray-900">
-                  {item.question[safeLang]}
+                  {getText(item.question)}
                 </h3>
 
                 <span
@@ -53,7 +57,7 @@ export default function FAQ() {
               </summary>
 
               <p className="mt-3 text-sm leading-relaxed text-gray-600">
-                {item.answer[safeLang]}
+                {getText(item.answer)}
               </p>
             </details>
           ))}

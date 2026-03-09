@@ -5,7 +5,8 @@ import { useLanguage } from "@/context/LanguageContext";
 
 export default function BookingBar() {
   const { lang } = useLanguage();
-  const safeLang: "no" | "en" = lang === "en" ? "en" : "no";
+ const safeLang: "no" | "en" | "de" =
+  lang === "en" ? "en" : lang === "de" ? "de" : "no";
 
   const booking = siteConfig.bookingSection;
   if (!booking?.enabled) return null;

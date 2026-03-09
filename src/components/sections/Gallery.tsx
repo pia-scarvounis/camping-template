@@ -11,14 +11,13 @@ export default function Gallery() {
   if (!siteConfig.features.gallery) return null;
 
   const { lang } = useLanguage();
-  const safeLang: "no" | "en" = lang === "en" ? "en" : "no";
+  const safeLang: "no" | "en" | "de" =
+    lang === "en" ? "en" : lang === "de" ? "de" : "no";
 
   const section = siteConfig.gallerySection;
 
   return (
     <Section id="galleri" variant="odd">
-
-      {/* Header – venstrejustert */}
       <Reveal variant="heading">
         <SectionHeader
           lang={safeLang}
@@ -27,9 +26,7 @@ export default function Gallery() {
         />
       </Reveal>
 
-      {/* Premium gallery grid */}
       <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
-
         {section.images.map((src, index) => (
           <div
             key={index}
@@ -47,9 +44,7 @@ export default function Gallery() {
             />
           </div>
         ))}
-
       </div>
-
     </Section>
   );
 }
