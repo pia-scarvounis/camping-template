@@ -16,7 +16,7 @@ export default function Gallery() {
   const section = siteConfig.gallerySection;
 
   return (
-    <Section id="galleri" variant="white">
+    <Section id="galleri" variant="odd">
 
       {/* Header – venstrejustert */}
       <Reveal variant="heading">
